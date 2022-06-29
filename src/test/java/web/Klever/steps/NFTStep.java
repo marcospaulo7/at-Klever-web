@@ -40,7 +40,6 @@ public class NFTStep {
         nftFunc.clickAgilityAffinityFilter();
 
     }
-
     @E("filtrar por {string}")
     public void filtrarPor(String arg0) {
         nftFunc.clickAgilityattributeFilter();

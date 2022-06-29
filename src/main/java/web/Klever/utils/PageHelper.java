@@ -62,29 +62,6 @@ public class PageHelper {
         return wait;
     }
 
-    public static void waitVisibilityText(String containsText, String description, int time) {
-        try {
-            log.info("localizando o seguinte texto: " + description);
-            WebDriverWait wait = new WebDriverWait(DriverFactory.getInstance().getCurrentDriver(), time);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'" + containsText + "')]")));
-            log.info("encontrado o texto: " + description + ".");
-
-        } catch (Exception e) {
-            log.info("Nao foi possivel localizar o elemento" + description);
-            log.info("Retornado o seguinte erro:" + e.getMessage());
-            throw new ElementNotVisibleException(e.getMessage());
-        }
-    }
-
-    private static void clearElement(WebElement element, String description) {
-        try {
-            element.clear();
-        } catch (Exception ignore) {
-            log.info("Nao foi possivel localizar/limpar o elemento" + description);
-            log.info("Retornado o seguinte erro:" + ignore.getMessage());
-            throw new ElementNotVisibleException(ignore.getMessage());
-        }
-    }
 
     public static void moveBarElement(WebElement element, Keys key, int quantityMove) {
         try {
@@ -98,8 +75,7 @@ public class PageHelper {
         } catch (Exception ignore) {
             log.info("Nao foi possivel a barra do elemento");
             log.info("Retornado o seguinte erro:" + ignore.getMessage());
-            throw new ElementNotVisibleException(ignore.getMessage());
-        }
+         }
 
     }
 }

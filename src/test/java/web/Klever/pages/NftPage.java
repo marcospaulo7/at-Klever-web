@@ -16,7 +16,6 @@ public class NftPage {
     @FindBy(xpath = "//div[@class='ant-modal-body']/descendant::span[text()='Agility Affinity']")
     private WebElement agilityAffinityOption;
 
-    //clicar no meio
     @FindBy(xpath = "//div[@class='ant-modal-body']/descendant::div[@class='ant-slider-rail'][1]")
     private WebElement agilityAffinityBarLevel;
 
@@ -24,7 +23,6 @@ public class NftPage {
     @FindBy(xpath = "//div[@class='ant-modal-body']/descendant::span[text()='Agility Attribute']")
     private WebElement agilityAttributeOption;
 
-    //clicar no meio
     @FindBy(xpath = "//div[@class='ant-modal-body']/descendant::div[@class='ant-slider-rail'][2]")
     private WebElement agilityAttributeBarLevel;
 

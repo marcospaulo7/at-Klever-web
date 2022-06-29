@@ -2,7 +2,6 @@ package web.Klever.func;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,17 +31,11 @@ public class NFTFunc {
     public void clickAgilityAffinityFilter() {
         PageHelper.elementIsVisible(nftPage.getAgilityAffinityOption(), "Agility Affinity option").click();
         PageHelper.moveBarElement(nftPage.getAgilityAffinityBarLevel(), Keys.ARROW_RIGHT, 5);
-
-
     }
 
     public void clickAgilityattributeFilter() {
-
-
         PageHelper.elementIsVisible(nftPage.getAgilityAttributeOption(), "Agility Attribute option").click();
         PageHelper.moveBarElement(nftPage.getAgilityAttributeBarLevel(), Keys.ARROW_RIGHT, 5);
-
-
     }
 
     public void clickApplyFiltersButton() {
@@ -51,7 +44,7 @@ public class NFTFunc {
 
     public String getOnsaleValue() throws InterruptedException {
         Thread.sleep(3000);
-        String onSaleCurrent = PageHelper.elementIsVisible(nftPage.getOnSaleValue(), "On save value list").getText();
-        return onSaleCurrent;
+        return PageHelper.elementIsVisible(nftPage.getOnSaleValue(), "On save value list").getText();
+
     }
 }
