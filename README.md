@@ -61,7 +61,7 @@ O arquivo sera gerado em:
 
 ### ⌨️Sobre Logs
 
-É gerado um arquivo de log contendoinformaçoes sobre a execução no cenário na seguinte pasta:
+É gerado um arquivo de log contendo informaçoes sobre a execução no cenário na seguinte pasta:
 ```
 Log
 ```
